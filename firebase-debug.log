@@ -1,0 +1,51 @@
+[debug] [2020-05-29T19:35:13.657Z] ----------------------------------------------------------------------
+[debug] [2020-05-29T19:35:13.661Z] Command:       /usr/local/bin/node /usr/local/bin/firebase init
+[debug] [2020-05-29T19:35:13.662Z] CLI Version:   7.4.0
+[debug] [2020-05-29T19:35:13.662Z] Platform:      darwin
+[debug] [2020-05-29T19:35:13.662Z] Node Version:  v10.16.0
+[debug] [2020-05-29T19:35:13.664Z] Time:          Fri May 29 2020 20:35:13 GMT+0100 (Central European Standard Time)
+[debug] [2020-05-29T19:35:13.664Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2020-05-29T19:35:13.690Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-05-29T19:35:13.691Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/hedi/Desktop/clean home/snake
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project.
+[debug] [2020-05-29T19:35:32.394Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-05-29T19:35:32.395Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-05-29T19:35:32.782Z] <<< HTTP RESPONSE 200
+[debug] [2020-05-29T19:35:33.161Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects  
+
+[debug] [2020-05-29T19:35:34.146Z] <<< HTTP RESPONSE 400
+[debug] [2020-05-29T19:35:34.146Z] <<< HTTP RESPONSE BODY
+[debug] [2020-05-29T19:35:34.161Z] HTTP Error: 400, field [project_id] has issue [project_id contains invalid characters]
+[debug] [2020-05-29T19:35:34.164Z] FirebaseError: HTTP Error: 400, field [project_id] has issue [project_id contains invalid characters]
+    at module.exports (/usr/local/lib/node_modules/firebase-tools/lib/responseToError.js:38:12)
+    at Request._callback (/usr/local/lib/node_modules/firebase-tools/lib/api.js:39:35)
+    at Request.self.callback (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:185:22)
+    at Request.emit (events.js:198:13)
+    at Request.EventEmitter.emit (domain.js:448:20)
+    at Request.<anonymous> (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:1161:10)
+    at Request.emit (events.js:198:13)
+    at Request.EventEmitter.emit (domain.js:448:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:1083:12)
+    at Object.onceWrapper (events.js:286:20)
+[error] 
+[error] Error: Failed to create Google Cloud project. See firebase-debug.log for more info.
